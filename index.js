@@ -23,7 +23,7 @@ app.get('/producto', async (req, res) => {
     }
 
     res.json({
-      proveedor: producto.producto,
+      nombre: producto.producto,
       proveedor: producto.proveedor,
       precioProveedor: producto.precio_proveedor,
       precioVenta: producto.precio_venta,
