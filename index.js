@@ -23,11 +23,11 @@ app.get('/producto', async (req, res) => {
     }
 
     res.json({
-      nombre: producto.producto,
-      proveedor: producto.proveedor,
-      precioProveedor: producto.precio_proveedor,
-      precioVenta: producto.precio_venta,
-    })
+  nombre: String(producto.producto).trim(),
+  proveedor: producto.proveedor,
+  precioProveedor: Number(producto.precio_proveedor),
+  precioVenta: Number(producto.precio_venta),
+})
   } catch (err) {
     res.status(500).json({ error: 'Error leyendo datos' })
   }
